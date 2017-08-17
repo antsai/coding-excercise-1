@@ -81,8 +81,11 @@ public class Refrigerator {
      *
      * @param item
      */
+    
     public boolean put(Item item) {
-        return false;
+        
+            
+        return false (itemCuFt > CuFt);
     }
 
 
