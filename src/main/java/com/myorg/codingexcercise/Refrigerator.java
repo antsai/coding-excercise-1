@@ -79,18 +79,18 @@ public class Refrigerator {
         this.smallShelfCount = smallShelfCount;
        //initialize items, maxHeapLargeShelf, maxHeapMediumShelf, and maxHeapSmallShelf
        //Define number of large shelf, medium, and small shelves
-       this.items = new LinkedList<>();
-       this.maxHeapLargeShelf =  new PriorityQueue<>(4,new Comparator<Shelf>() {
+       this.items = new LinkedList<Item>();
+       this.maxHeapLargeShelf =  new PriorityQueue<Shelf>(4,new Comparator<Shelf>() {
            public int compare(Shelf o1, Shelf o2) {
                return o2.getAvailableCuFt() - o1.getAvailableCuFt()  ;
            }
        });
-       this.maxHeapMediumShelf =  new PriorityQueue<>(4,new Comparator<Shelf>() {
+       this.maxHeapMediumShelf =  new PriorityQueue<Shelf>(4,new Comparator<Shelf>() {
            public int compare(Shelf o1, Shelf o2) {
                return o2.getAvailableCuFt() - o1.getAvailableCuFt()  ;
            }
        });
-       this.maxHeapSmallShelf =  new PriorityQueue<>(4,new Comparator<Shelf>() {
+       this.maxHeapSmallShelf =  new PriorityQueue<Shelf>(4,new Comparator<Shelf>() {
            public int compare(Shelf o1, Shelf o2) {
                return o2.getAvailableCuFt() - o1.getAvailableCuFt()  ;
            }
