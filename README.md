@@ -10,9 +10,11 @@ See class header comments to understand the problem.
     
     
     
-###################################
+######################################################################
+
     Design idea
-###################################
+######################################################################
+
     This idea of designing refrigerator is to efficiently utilize refrigerator space 
     while placing an item into refrigerator. When an item is taken out from refrigerator
     , there is an chance to re-arrange those items in refrigerator so that space in refrigerator
@@ -25,11 +27,11 @@ See class header comments to understand the problem.
     largest available. So, creating a maxheap for available space is data structure for my initial thought.
     Every time that a new item is going to be placed into refrigerator, maxheap gives largest available shelf 
     in refrigerator. However, my inital design does not take advantage of the remaining space of occupied shelf.
-           In addition, I found that the first choice to place small item is to place at remaining space of occupied large shelf
-    If no space is not found at large shelf, the small shelf is the second choice to efficiently place small item.
-    If no space is found at both shelves, the medium shelf is the final place. The same logic is able to apply to
-    medium item. The first choice of medium item is to look for resting avilable space in large shelf.
-    If no space is not found, the only choice to medium is to place at medium shelf.
+           In addition, I found that the first choice to place small item is to place at remaining space of 
+    occupied large shelf. If no space is not found at large shelf, the small shelf is the second choice 
+    to efficiently place small item. If no space is found at both shelves, the medium shelf is the final place. 
+    The same logic is able to apply to medium item. The first choice of medium item is to look for resting 
+    avilable space in large shelf. If no space is not found, the only choice to medium is to place at medium shelf.
     In order to achive my second idea, there are three maxheaps. First maxheap is created for large shelf called
     maxHeapLargeShelf. Second maxheap is created for medium shelf called maxHeapMediumShelf. 
     Third maxheap is created for small shelf called maxHeapSmallShelf.
